@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Friend>
+@{
+}
+
+
+
+<h1>F.R.I.E.N.D.S</h1>
+
+
+
+<div class="Friend">
+    <table border="1">
+        <tr>
+            <th>FriendId</th>
+            <th>FriendName</th>
+            <th>Place</th>
+        </tr>
+
+
+
+        @foreach (var friend in Model)
+        {
+            <tr>
+                <td>@friend.FriendId</td>
+
+
+
+                <td>@friend.FriendName</td>
+
+
+
+                <td>@friend.Place</td>
+            </tr>
+
+
+
+
+        }
+
+
+
+    </table>
+
+
+
+
+</div>
