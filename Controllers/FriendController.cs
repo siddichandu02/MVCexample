@@ -13,8 +13,7 @@ namespace Ecercise2_LINQ.Controllers
     public class FriendController : Controller
     {
         readonly string ConnectionInformation = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=adocrud;Integrated Security=true";
-        SqlDataReader myReader;
-       
+        SqlDataReader myReader;       
         private readonly Data _db;
         public FriendController(Data db)
         {
@@ -30,7 +29,9 @@ namespace Ecercise2_LINQ.Controllers
             return View();
         }
         [HttpPost,Route("Post")]
-        public IActionResult Post(String FriendId, String FriendName, String Place)
+        // public IActionResult Post(String FriendId, String FriendName, String Place)
+        public IActionResult Post(Friend friend)
+
         {/*ADO
             Friend friend = new Friend();
             friend.FriendId =long.Parse( FriendId);
@@ -49,10 +50,10 @@ namespace Ecercise2_LINQ.Controllers
 
            return View();*/
 
-            Friend friend = new Friend();
-            friend.FriendId = long.Parse(FriendId);
-            friend.FriendName = FriendName;
-            friend.Place = Place;
+            //   Friend friend = new Friend();
+            // friend.FriendId = long.Parse(FriendId);
+            //friend.FriendName = FriendName;
+            //friend.Place = Place;
             _db.friends.Add(friend);
             _db.SaveChanges();
             return View();

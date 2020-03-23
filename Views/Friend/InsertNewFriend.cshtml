@@ -13,7 +13,7 @@
 
 
 
-            <b> <label asp-for="FriendId"></label></b>
+            <b> <label asp-for="FriendId">FriendID : </label></b>
             <input type="text" placeholder="Enter Friend ID" name="FriendId">
             <span asp-validation-for="FriendId"></span>
             <br />
@@ -47,7 +47,7 @@
 
 
 
-            <b> <label asp-for="FriendId"></label></b>
+            <b> <label asp-for="FriendId">FriendID : </label></b>
             <input type="text" placeholder="Enter Friend ID" name="FriendId">
             <span asp-validation-for="FriendId"></span>
             <br />
@@ -72,7 +72,7 @@
 <br />
 <br />
 
-
+<h1>RetrieveFriends</h1>
 
 <form action="select">
     <div class="container">
@@ -84,15 +84,17 @@
     </div>
 
 </form>
-
-
+<br />
+<br />
+<br />
+<h1>DeleteFriends</h1>
 
 <form asp-action="delete">
     <div class="container">
 
 
         <b> <label asp-for="FriendId"></label></b>
-        <input type="text" placeholder="Enter Friend ID to delete" name="FriendId">
+        <input type="text" placeholder="Enter Friend ID" name="FriendId">
 
         <button type="submit" class="registerbtn">Delete</button>
 
